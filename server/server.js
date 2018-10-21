@@ -35,7 +35,7 @@ app.post('/answers', (req, res) => {
 
   const pyProg = spawn('python', ["./OTT/vienna.py",x0,x1,x2,x3,x4,x5,x6]);
 
-  pyProg.stdout.on('data', function (data) {
+  pyProg.stdout.on('data', (data) => {
     const result = data.toString();
     console.log(result);
     res.status(200).send(result);
