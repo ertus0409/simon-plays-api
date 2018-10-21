@@ -7,13 +7,13 @@ import sys
 #songs = pd.read_csv('./../OTT/data.csv')
 songs = pd.read_csv('./OTT/data.csv')
 songs.drop(['duration_ms', 'key', 'loudness', 'mode', 'tempo', 'time_signature', 'target'], axis=1, inplace=True)
-x0 = 0.00
-x1 = 1.00
-x2 = 0.00
-x3 = 1.00
-x4 = 0.00
-x5 = 0.00
-x6 = 0.00
+x0 = float(sys.argv[1])
+x1 = float(sys.argv[2])
+x2 = float(sys.argv[3])
+x3 = float(sys.argv[4])
+x4 = float(sys.argv[5])
+x5 = float(sys.argv[6])
+x6 = float(sys.argv[7])
 
 x = [x0, x1, x2, x3, x4, x5, x6]
 n, d = songs.shape
