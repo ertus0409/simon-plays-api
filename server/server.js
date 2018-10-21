@@ -38,7 +38,7 @@ app.post('/answers', (req, res) => {
   pyProg.stdout.on('data', function (data) {
     const result = data.toString();
     console.log(result);
-    return res.status(200).send(result);
+    res.status(200).send(result);
   });
 
 });
